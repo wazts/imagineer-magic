@@ -1,4 +1,4 @@
-# imagineer-magic
-The wordpress theme for the Imagineer Magic blog. 
+Imagineer Magic Wordpress Theme
+===============================
 
-Written in PHP and designed to work with Wordpress, this is a theme for a blog of any type but is specifically designed for Imagineer Magic.
+The theme for the blog ImagineerMagic.com.
