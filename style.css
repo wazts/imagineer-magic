@@ -48,17 +48,16 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 --------------------------------------------------------------*/
 
 body {
-
 }
 
 /* -----------------------------------------------------------------------------
 ## colors
 ----------------------------------------------------------------------------- */
 .background-dark-grey {
-	background-color: #3c3b3b;
+	background-color: #444;
 }
 .color-dark-grey {
-	color: #3c3b3b;
+	color: #444;
 }
 .background-red {
 	background-color: #a03f3e;
@@ -66,19 +65,39 @@ body {
 .color-red {
 	color: #a03f3e;
 }
+
+.horizontal-red {
+	background-color: #a03f3e;
+	width:100%;
+	height:5px;
+}
+
 .background-yellow {
 	background-color: #f8b226;
 }
+
 .color-yellow {
 	color: #f8b226;
+	
+}.horizontal-yellow {
+	background-color: #f8b226;
+	width:100%;
+	height:5px;
 }
 
 .background-white {
-	background-color: #fff;
+	background-color: #aaa;
 }
 /* -----------------------------------------------------------------------------
 ## Header / Top Nav
 ----------------------------------------------------------------------------- */
+#page-header {
+	width:100%;
+	height: 500px;
+	background-size: cover;
+	background-position: 50% 50%;
+}
+
 .logo-row {
 
 }
@@ -91,32 +110,68 @@ body {
 	border-radius: 0px;
 }
 
-/* -----------------------------------------------------------------------------
-## Home page
------------------------------------------------------------------------------ */
-.jumbotron {
-	border-radius: 0px;
+.navbar-default {
+	border: 0px;
+	background-color: rgba(68,68,68,0.5);
 }
 
 /* -----------------------------------------------------------------------------
 ## Home page
 ----------------------------------------------------------------------------- */
 .post {
-	background : #fff;
-	margin-bottom: 15px;
+	margin-bottom: 25px;
 }
+
 .entry-content{
 	overflow-y : hidden;
-	height : 300px;
-	padding: 10px;
+	min-height : 100px;
+	padding-left: 1em;
+	padding-right: 1em;
+	margin-top:1em;
+	top: -10px;
+	position:relative;
 }
 
 .entry-thumb {
-	height: 100px;
-	overflow: hidden;
+	width:100%;
+	height: 200px;
+	background-size: cover;
+	background-position: 50% 50%;
+
 }
 
-.entry-thumb-img {
+.home-post-title {
 	position: relative;
-	top: -50%;
+	top: -10px;
+	padding: 1em;
+	width: 90%;
+	box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+	margin: 0 auto;
+}
+
+.entry-title {
+	margin-top: 0;
+	opacity: 1.0;
+	color: #333;
+}
+
+.entry-title a {
+	color: #333;
+}
+
+.entry-header-featured {
+	position: relative;
+	top: -10px;
+	margin: 0 auto;
+	margin-bottom: 0px;
+	padding: 1em;
+	box-shadow: 0px 2px 1px rgba(0,0,0,0.3);
+	
+}
+
+.entry-header {
+	width :100%;
+	margin-bottom: 0px;
+	padding: 1em;
+	
 }

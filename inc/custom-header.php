@@ -29,6 +29,7 @@ function imagineer_magic_custom_header_setup() {
 		'width'                  => 1000,
 		'height'                 => 250,
 		'flex-height'            => true,
+		'flex-width'			 => true,
 		'wp-head-callback'       => 'imagineer_magic_header_style',
 		'admin-head-callback'    => 'imagineer_magic_admin_header_style',
 		'admin-preview-callback' => 'imagineer_magic_admin_header_image',
