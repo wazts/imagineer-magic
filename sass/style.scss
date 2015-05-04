@@ -1,0 +1,196 @@
+/*
+Theme Name: Imagineer Magic
+Theme URI: http://underscores.me/
+Author: Kyle Wagner
+Author URI: http://kyle-wagner.com
+Description: A theme for the Imagineer Magic blog.
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: imagineer-magic
+Tags:
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+Imagineer Magic is based on Underscores http://underscores.me/, (C) 2012-2015 Automattic, Inc.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
+*/
+
+@import "compass";
+@import "compass/reset";
+
+// Import partials
+@import "_partials/variables";
+@import "_partials/mixins";
+@import "_partials/typography";
+
+/* -----------------------------------------------------------------------------
+## Root
+----------------------------------------------------------------------------- */
+body {
+	background-color: $color-grey-light;
+}
+
+/* -----------------------------------------------------------------------------
+## Dividers
+----------------------------------------------------------------------------- */
+
+.horizontal-red {
+	@include horizontal-line(5px, $color-red);
+}
+
+.horizontal-yellow {
+	@include horizontal-line(5px, $color-yellow);
+}
+
+.horizontal-grey-light {
+	@include horizontal-line(2px, $color-grey-light);
+}
+
+/* -----------------------------------------------------------------------------
+## Header / Top Nav
+----------------------------------------------------------------------------- */
+#page-header {
+	width:100%;
+	height: $page-header-height;
+	background-size: cover;
+	background-position: 50% 50%;
+}
+
+.navbar {
+	border-radius: 0px;
+	position: relative;
+	bottom: 0px;
+}
+
+.navbar-imagineer {
+	$nav-height: 50px;
+	height: $nav-height;
+	line-height: $nav-height;
+	position: relative;
+	top: $page-header-height - $nav-height;
+	border: 0px;
+	background-color: rgba(68,68,68,0.6);
+	
+	
+	ul{
+		a {
+	    	color: $color-grey-light;
+		}
+	   	a:hover {
+	   		color: $color-grey-light;
+	   		background-color: $color-red;
+	   	}
+	}
+	
+	.active {
+			a {
+				color: $text-color;	
+			}
+			
+	    	background-color: $color-yellow;
+		}
+}
+
+.navbar-brand {
+    background-color: $color-yellow;
+}
+
+/* -----------------------------------------------------------------------------
+## Home page
+----------------------------------------------------------------------------- */
+.site-content {
+	margin-top: 30px;
+}
+
+/* -----------------------------------------------------------------------------
+## Home page
+----------------------------------------------------------------------------- */
+.post {
+	margin-bottom: 25px;
+}
+
+.entry-content{
+	overflow-y : hidden;
+	min-height : 100px;
+	padding-left: 1em;
+	padding-right: 1em;
+	margin-top:1em;
+	top: -10px;
+	position:relative;
+}
+
+.entry-thumb {
+	width:100%;
+	height: 200px;
+	background-size: cover;
+	background-position: 50% 50%;
+
+}
+
+.home-post-title {
+	position: relative;
+	top: -10px;
+	padding: 1em;
+	width: 90%;
+	box-shadow: 0px 0px 10px rgba(0,0,0,0.4);
+	margin: 0 auto;
+	background-color: $color-yellow;
+}
+
+.entry-title {
+	margin-top: 0;
+	opacity: 1.0;
+	color: $text-color;
+	
+	a {
+	    color: $text-color;
+    }    
+}
+
+
+.entry-header-featured {
+	position: relative;
+	top: -10px;
+	margin: 0 auto;
+	margin-bottom: 0px;
+	padding: 1em;
+	box-shadow: 0px 2px 1px rgba(0,0,0,0.3);
+	
+}
+
+.entry-header {
+	width :100%;
+	margin-bottom: 0px;
+	
+}
+
+.entry-meta {
+    padding-left: 1em;
+    padding-right: 1em;
+    color: $color-yellow;
+    
+    i {
+        color: $color-red;
+    }
+    
+    a {
+        color: $text-color;
+    }
+}
+
+/*
+SIDEBAR 
+*/
+
+.widget-title {
+	background-color: $color-red;
+	color: $color-grey-light;
+	padding: 5px;
+	display: block;
+	font-size: $widget-title-size;
+	text-align: center;
+}

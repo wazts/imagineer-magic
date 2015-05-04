@@ -1,0 +1,7 @@
+/* mixins */
+
+@mixin horizontal-line ($height, $color) {
+    width: 100%;
+    height: $height;
+    background-color: $color;
+}

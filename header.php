@@ -26,7 +26,7 @@
 		endif; ?>
 	<?php endif; ?>
 	<header id="page-header" style="background-image: url('<?php echo $header_image ?>')">
-		<nav class="navbar navbar-default">
+		<nav class="navbar navbar-imagineer">
 			<div class="container">
 			<!-- Brand and toggle get grouped for better mobile display -->
 				<div class="navbar-header">
@@ -36,7 +36,7 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-				<a class="navbar-brand background-yellow" href="#">Imagineer Magic</a>
+				<a class="navbar-brand" href="#">Imagineer Magic</a>
 				</div>
 			
 				<!-- Collect the nav links, forms, and other content for toggling -->
@@ -57,6 +57,7 @@
 				</div><!-- /.navbar-collapse -->
 			</div><!-- /.container-fluid -->
 		</nav>
+		
 	</header>
 	<div class="horizontal-red"></div>
 	<div id="content" class="site-content">

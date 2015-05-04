@@ -14,8 +14,8 @@
 				</a>
 			<?php endif; ?>
 			<div class="horizontal-red"></div>
-			<div class="background-yellow home-post-title">
-				<?php the_title( sprintf( '<h3 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h3>' ); ?>
+			<div class="home-post-title">
+				<?php the_title( sprintf( '<span class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></span>' ); ?>
 			</div>
 		</header><!-- .entry-header -->
 		
@@ -37,9 +37,11 @@
 		</div><!-- .entry-content -->
 	</div><!-- .entry-main -->
 	<footer>
+		<div class="horizontal-grey-light"></div>
 		<?php if ( 'post' == get_post_type() ) : ?>
 			<div class="entry-meta">
-				<i class="fa fa-clock-o color-red"></i> <?php imagineer_magic_posted_on(); ?>
+				<i class="fa fa-clock-o color-red"></i> <span class="content-date"><?php imagineer_magic_posted_on(); ?></span> | 
+				<i class="fa fa-user color-red"></i> <?php imagineer_magic_posted_by(); ?>
 			</div><!-- .entry-meta -->
 		<?php endif; ?>
 	</footer>

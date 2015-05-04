@@ -98,7 +98,7 @@ if ( ! function_exists( 'imagineer_magic_posted_by' ) ) :
  */
 function imagineer_magic_posted_by() {
 	$byline = sprintf(
-		_x( 'by %s', 'post author', 'imagineer-magic' ),
+		_x( '%s', 'post author', 'imagineer-magic' ),
 		'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 	);
 
