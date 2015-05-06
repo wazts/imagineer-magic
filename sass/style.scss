@@ -21,6 +21,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 
 @import "compass";
 @import "compass/reset";
+ @import "compass/layout/sticky-footer";
 
 // Import partials
 @import "_partials/variables";
@@ -30,8 +31,9 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 /* -----------------------------------------------------------------------------
 ## Root
 ----------------------------------------------------------------------------- */
+
 body {
-	background-color: $color-grey-light;
+	background-color: $color-background;
 }
 
 /* -----------------------------------------------------------------------------
@@ -71,7 +73,6 @@ body {
 	height: $nav-height;
 	line-height: $nav-height;
 	position: relative;
-	top: $page-header-height - $nav-height;
 	border: 0px;
 	background-color: rgba(68,68,68,0.6);
 	
@@ -100,20 +101,41 @@ body {
 }
 
 /* -----------------------------------------------------------------------------
+## site Footer
+----------------------------------------------------------------------------- */
+#colophon {
+	background-color: $color-grey-dark;
+	padding-top: 1em;
+	padding-bottom: 1em;
+	color: $color-grey-light;
+}
+
+#site-footer-info {
+	text-align: center;
+}
+
+.site-footer {
+	min-height: 100px;
+	a {
+		color: $color-grey-light;
+	}
+}
+/* -----------------------------------------------------------------------------
 ## Home page
 ----------------------------------------------------------------------------- */
 .site-content {
-	margin-top: 30px;
+	margin-top: $main-top;
 }
 
 /* -----------------------------------------------------------------------------
 ## Home page
 ----------------------------------------------------------------------------- */
 .post {
-	margin-bottom: 25px;
+	margin-bottom: 40px;
 }
 
 .entry-content{
+	font-size: 1.1em;
 	overflow-y : hidden;
 	min-height : 100px;
 	padding-left: 1em;
@@ -121,6 +143,21 @@ body {
 	margin-top:1em;
 	top: -10px;
 	position:relative;
+	
+	.read-more {
+		margin-top: 1em;
+		margin-bottom: 1em;
+		a {
+			color: $color-red;
+			text-decoration: underline;
+		}
+		
+		a:hover {
+			color: $color-red;
+			text-decoration: none;
+		}
+		
+	}
 }
 
 .entry-thumb {
@@ -139,39 +176,73 @@ body {
 	box-shadow: 0px 0px 10px rgba(0,0,0,0.4);
 	margin: 0 auto;
 	background-color: $color-yellow;
-}
-
-.entry-title {
-	margin-top: 0;
-	opacity: 1.0;
-	color: $text-color;
 	
-	a {
-	    color: $text-color;
-    }    
+	.entry-title {
+		margin-top: 0;
+		opacity: 1.0;
+		color: $text-color;
+		font-size: 1.5em;
+		a {
+		    color: $text-color;
+    	}    
+	}
+	
 }
 
-
-.entry-header-featured {
+.single-header {
 	position: relative;
-	top: -10px;
-	margin: 0 auto;
-	margin-bottom: 0px;
-	padding: 1em;
-	box-shadow: 0px 2px 1px rgba(0,0,0,0.3);
-	
-}
-
-.entry-header {
+	top: -$main-top - 15px;
 	width :100%;
 	margin-bottom: 0px;
+	background-color: $color-yellow;
+	padding: 1em;
 	
+	box-shadow: 0px 0px 10px rgba(0,0,0,0.4);
+	
+	.entry-title {
+		font-size: 2em;
+	}
+	
+	.entry-meta {
+		color: $text-color;
+	}
+	
+}
+
+footer {
+	.entry-meta {
+		border-top: solid 1px $color-grey-light;
+    	border-bottom: solid 1px $color-grey-light;
+	}
+}
+
+footer.entry-footer {
+		border-top: solid 1px $color-grey-light;
+    	border-bottom: solid 1px $color-grey-light;
+    	font-size: $font-size-small;
+    	padding-left: 1em;
+	    padding-right: 1em;
+	    padding-top: 0.25em;
+	    padding-bottom: 0.25em;
+    	
+    	.edit-link {
+			color: $color-red;
+			float: right;
+		}
+		.cat-links {
+			color: $color-red;
+		}
 }
 
 .entry-meta {
+	font-size: $font-size-small;
     padding-left: 1em;
     padding-right: 1em;
+    padding-top: 0.25em;
+    padding-bottom: 0.25em;
     color: $color-yellow;
+    
+   
     
     i {
         color: $color-red;
@@ -179,18 +250,36 @@ body {
     
     a {
         color: $text-color;
+		text-decoration: underline;
+    }
+    
+    a:hover {
+		text-decoration: none;
     }
 }
 
-/*
-SIDEBAR 
-*/
-
+/* -----------------------------------------------------------------------------
+## Side bar
+----------------------------------------------------------------------------- */
 .widget-title {
 	background-color: $color-red;
-	color: $color-grey-light;
+	color: $color-yellow;
 	padding: 5px;
 	display: block;
 	font-size: $widget-title-size;
 	text-align: center;
+}
+
+.widget-area {
+	// .children {
+	// 	margin-left: 1em;
+	// }
+	
+	h1 {
+		margin-bottom: 1em;
+	}
+	
+	.cat-item {
+		padding-left: 1em;
+	}
 }

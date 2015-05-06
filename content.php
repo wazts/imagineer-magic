@@ -22,12 +22,9 @@
 		<div class="entry-content">
 			<?php
 				/* translators: %s: Name of current post */
-				the_content( sprintf(
-					__( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'imagineer-magic' ),
-					the_title( '<span class="screen-reader-text">"', '"</span>', false )
-				) );
+				the_excerpt();
 			?>
-	
+			<span class="read-more"><a href="<?php the_permalink(); ?>">Read more</a></span>
 			<?php
 				wp_link_pages( array(
 					'before' => '<div class="page-links">' . __( 'Pages:', 'imagineer-magic' ),
@@ -37,11 +34,14 @@
 		</div><!-- .entry-content -->
 	</div><!-- .entry-main -->
 	<footer>
-		<div class="horizontal-grey-light"></div>
 		<?php if ( 'post' == get_post_type() ) : ?>
 			<div class="entry-meta">
 				<i class="fa fa-clock-o color-red"></i> <span class="content-date"><?php imagineer_magic_posted_on(); ?></span> | 
 				<i class="fa fa-user color-red"></i> <?php imagineer_magic_posted_by(); ?>
+				<span class="pull-right">
+					<i class="fa fa-comment"></i>
+					<?php comments_popup_link('No Comments', '1 Comment', '% Comments'); ?>
+				</span>
 			</div><!-- .entry-meta -->
 		<?php endif; ?>
 	</footer>

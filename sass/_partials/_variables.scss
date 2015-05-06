@@ -5,8 +5,12 @@
 /* Body Text Styles */
 $text-color: #333;
 $base-font-size: 1em;
-$base-font-family: "HelveticaNeue", Helvetica, Arial, sans-serif;
+$base-font-family: 'Varela Round', "Raleway", "HelveticaNeue", Helvetica, Arial, sans-serif;
+$font-raleway: "Raleway", sans-serif;
+$font-varela-round: "Varela Round", sans-serif;
 $base-font-weight: 400;
+
+$font-size-small: 0.9em;
 
 /* Header */
 $page-header-height: 400px;
@@ -15,7 +19,11 @@ $page-header-height: 400px;
 $widget-title-size: 1.5em;
 
 /* Colors */
+$color-background: #eee;
 $color-grey-dark: #444444;
-$color-grey-light: #eee;
+$color-grey-light: #ddd;
 $color-red: #a03f3e;
 $color-yellow: #f8b226;
+
+/* Offsets */
+$main-top: 30px;

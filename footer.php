@@ -11,14 +11,15 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="background-dark-grey">
-			<div class="container">
-				<div class="site-info">
+		<div class="container">
+			<div class="row">
+				<div class="site-footer-logo">Imagineer Magic</div>
+			</div>
+			<div id="site-footer-info" class="site-info">
 					<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'imagineer-magic' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'imagineer-magic' ), 'WordPress' ); ?></a>
 					<span class="sep"> | </span>
 					<?php printf( __( 'Theme: %1$s by %2$s.', 'imagineer-magic' ), 'Imagineer Magic', '<a href="http://kyle-wagner.com" rel="designer">Kyle Wagner</a>' ); ?>
-				</div><!-- .site-info -->
-			</div>
+			</div><!-- .site-info -->
 		</div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->

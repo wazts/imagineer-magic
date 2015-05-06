@@ -9,6 +9,16 @@
 require_once('wp_bootstrap_navwalker.php');
 
 /**
+ * Set the except length
+ */
+if( !function_exists( 'my_excerpt_length' )) {
+	function my_excerpt_length($length) {
+		return 100; // Or whatever you want the length to be.
+	}
+	add_filter('excerpt_length', 'my_excerpt_length');
+}
+
+/**
  * Set the content width based on the theme's design and stylesheet.
  */
 if ( ! isset( $content_width ) ) {
@@ -116,6 +126,7 @@ function imagineer_magic_scripts() {
 	wp_enqueue_script( 'imagineer-magic-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
 	
 	wp_enqueue_style( 'font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
+	wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css?family=Raleway:400,700|Varela+Round');
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

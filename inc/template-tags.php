@@ -117,7 +117,7 @@ function imagineer_magic_entry_footer() {
 		/* translators: used between list items, there is a space after the comma */
 		$categories_list = get_the_category_list( __( ', ', 'imagineer-magic' ) );
 		if ( $categories_list && imagineer_magic_categorized_blog() ) {
-			printf( '<span class="cat-links">' . __( 'Posted in %1$s', 'imagineer-magic' ) . '</span>', $categories_list );
+			printf( '<span class="cat-links">' . __( '<i class="fa fa-magic"></i>%1$s', 'imagineer-magic' ) . '</span>', $categories_list );
 		}
 
 		/* translators: used between list items, there is a space after the comma */
@@ -133,7 +133,7 @@ function imagineer_magic_entry_footer() {
 		echo '</span>';
 	}
 
-	edit_post_link( __( 'Edit', 'imagineer-magic' ), '<span class="edit-link">', '</span>' );
+	edit_post_link( __( 'Edit', 'imagineer-magic' ), '<span class="edit-link"><i class="fa fa-pencil"></i>', '</span>' );
 }
 endif;
 

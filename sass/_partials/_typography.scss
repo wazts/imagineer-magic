@@ -1,9 +1,21 @@
 /* typography */
 
+// Fonts
+
 body {
     color: $text-color;
     font-size: $base-font-size;
-    font-family: $base-font-family;
+    font-family: $font-varela-round;
     font-weight: $base-font-weight;
     line-height: 1.6;
+}
+
+a {
+    text-decoration: underline;
+	color: $text-color;
+}
+
+a:hover {
+    text-decoration: none;
+    color: $text-color;
 }
