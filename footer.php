@@ -13,7 +13,11 @@
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="container">
 			<div class="row">
-				<div class="site-footer-logo">Imagineer Magic</div>
+				<?php if ( is_active_sidebar( 'sidebar-bottom-1' ) ) : ?>
+					<div id="sidebar-bottom" class="widget-area" role="complementary">
+						<?php dynamic_sidebar( 'sidebar-bottom-1' ); ?>
+					</div><!-- #sidebar-bottom -->
+				<?php endif; ?>
 			</div>
 			<div id="site-footer-info" class="site-info">
 					<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'imagineer-magic' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'imagineer-magic' ), 'WordPress' ); ?></a>

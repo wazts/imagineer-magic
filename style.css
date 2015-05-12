@@ -113,6 +113,26 @@ a:hover {
   color: #333;
 }
 
+/* line 23, sass/_partials/_typography.scss */
+h1 {
+  font-size: 2em;
+}
+
+/* line 27, sass/_partials/_typography.scss */
+h2 {
+  font-size: 1.8em;
+}
+
+/* line 31, sass/_partials/_typography.scss */
+h3 {
+  font-size: 1.4em;
+}
+
+/* line 35, sass/_partials/_typography.scss */
+h4 {
+  font-size: 1.2em;
+}
+
 /* -----------------------------------------------------------------------------
 ## Root
 ----------------------------------------------------------------------------- */
@@ -197,24 +217,31 @@ body {
 /* -----------------------------------------------------------------------------
 ## site Footer
 ----------------------------------------------------------------------------- */
-/* line 106, sass/style.scss */
+/* line 107, sass/style.scss */
 #colophon {
   background-color: #444444;
   padding-top: 1em;
   padding-bottom: 1em;
   color: #ddd;
 }
-
 /* line 113, sass/style.scss */
-#site-footer-info {
-  text-align: center;
+#colophon .widget-title {
+  font-size: 1.1em;
 }
 
-/* line 117, sass/style.scss */
+/* line 118, sass/style.scss */
+#site-footer-info {
+  margin-top: 1em;
+  text-align: center;
+  padding-top: 5px;
+  font-size: 0.7em;
+}
+
+/* line 125, sass/style.scss */
 .site-footer {
   min-height: 100px;
 }
-/* line 119, sass/style.scss */
+/* line 127, sass/style.scss */
 .site-footer a {
   color: #ddd;
 }
@@ -222,7 +249,7 @@ body {
 /* -----------------------------------------------------------------------------
 ## Home page
 ----------------------------------------------------------------------------- */
-/* line 126, sass/style.scss */
+/* line 134, sass/style.scss */
 .site-content {
   margin-top: 30px;
 }
@@ -230,12 +257,12 @@ body {
 /* -----------------------------------------------------------------------------
 ## Home page
 ----------------------------------------------------------------------------- */
-/* line 133, sass/style.scss */
+/* line 141, sass/style.scss */
 .post {
   margin-bottom: 40px;
 }
 
-/* line 137, sass/style.scss */
+/* line 145, sass/style.scss */
 .entry-content {
   font-size: 1.1em;
   overflow-y: hidden;
@@ -246,23 +273,23 @@ body {
   top: -10px;
   position: relative;
 }
-/* line 147, sass/style.scss */
+/* line 155, sass/style.scss */
 .entry-content .read-more {
   margin-top: 1em;
   margin-bottom: 1em;
 }
-/* line 150, sass/style.scss */
+/* line 158, sass/style.scss */
 .entry-content .read-more a {
   color: #a03f3e;
   text-decoration: underline;
 }
-/* line 155, sass/style.scss */
+/* line 163, sass/style.scss */
 .entry-content .read-more a:hover {
   color: #a03f3e;
   text-decoration: none;
 }
 
-/* line 163, sass/style.scss */
+/* line 171, sass/style.scss */
 .entry-thumb {
   width: 100%;
   height: 200px;
@@ -270,7 +297,7 @@ body {
   background-position: 50% 50%;
 }
 
-/* line 171, sass/style.scss */
+/* line 179, sass/style.scss */
 .home-post-title {
   position: relative;
   top: -10px;
@@ -280,19 +307,19 @@ body {
   margin: 0 auto;
   background-color: #f8b226;
 }
-/* line 180, sass/style.scss */
+/* line 188, sass/style.scss */
 .home-post-title .entry-title {
   margin-top: 0;
   opacity: 1.0;
   color: #333;
   font-size: 1.5em;
 }
-/* line 185, sass/style.scss */
+/* line 193, sass/style.scss */
 .home-post-title .entry-title a {
   color: #333;
 }
 
-/* line 192, sass/style.scss */
+/* line 200, sass/style.scss */
 .single-header {
   position: relative;
   top: -45px;
@@ -302,22 +329,22 @@ body {
   padding: 1em;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
 }
-/* line 202, sass/style.scss */
+/* line 210, sass/style.scss */
 .single-header .entry-title {
   font-size: 2em;
 }
-/* line 206, sass/style.scss */
+/* line 214, sass/style.scss */
 .single-header .entry-meta {
   color: #333;
 }
 
-/* line 213, sass/style.scss */
+/* line 221, sass/style.scss */
 footer .entry-meta {
   border-top: solid 1px #ddd;
   border-bottom: solid 1px #ddd;
 }
 
-/* line 219, sass/style.scss */
+/* line 227, sass/style.scss */
 footer.entry-footer {
   border-top: solid 1px #ddd;
   border-bottom: solid 1px #ddd;
@@ -327,17 +354,17 @@ footer.entry-footer {
   padding-top: 0.25em;
   padding-bottom: 0.25em;
 }
-/* line 228, sass/style.scss */
+/* line 236, sass/style.scss */
 footer.entry-footer .edit-link {
   color: #a03f3e;
   float: right;
 }
-/* line 232, sass/style.scss */
+/* line 240, sass/style.scss */
 footer.entry-footer .cat-links {
   color: #a03f3e;
 }
 
-/* line 237, sass/style.scss */
+/* line 245, sass/style.scss */
 .entry-meta {
   font-size: 0.9em;
   padding-left: 1em;
@@ -346,25 +373,25 @@ footer.entry-footer .cat-links {
   padding-bottom: 0.25em;
   color: #f8b226;
 }
-/* line 247, sass/style.scss */
+/* line 255, sass/style.scss */
 .entry-meta i {
   color: #a03f3e;
 }
-/* line 251, sass/style.scss */
+/* line 259, sass/style.scss */
 .entry-meta a {
   color: #333;
   text-decoration: underline;
 }
-/* line 256, sass/style.scss */
+/* line 264, sass/style.scss */
 .entry-meta a:hover {
   text-decoration: none;
 }
 
 /* -----------------------------------------------------------------------------
-## Side bar
+## Sidebars
 ----------------------------------------------------------------------------- */
-/* line 264, sass/style.scss */
-.widget-title {
+/* line 274, sass/style.scss */
+#sidebar-1 .widget-title {
   background-color: #a03f3e;
   color: #f8b226;
   padding: 5px;
@@ -372,12 +399,24 @@ footer.entry-footer .cat-links {
   font-size: 1.5em;
   text-align: center;
 }
-
-/* line 278, sass/style.scss */
-.widget-area h1 {
+/* line 284, sass/style.scss */
+#sidebar-1 .widget-area .children {
+  margin-left: 1em;
+}
+/* line 288, sass/style.scss */
+#sidebar-1 .widget-area h1 {
   margin-bottom: 1em;
 }
-/* line 282, sass/style.scss */
-.widget-area .cat-item {
-  padding-left: 1em;
+
+/* line 294, sass/style.scss */
+#sidebar-bottom {
+  font-size: 0.9em;
+}
+/* line 296, sass/style.scss */
+#sidebar-bottom .widget-title {
+  color: #f8b226;
+}
+/* line 301, sass/style.scss */
+#sidebar-bottom .cat-item .children {
+  margin-left: 1em;
 }

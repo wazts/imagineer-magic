@@ -21,7 +21,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 
 @import "compass";
 @import "compass/reset";
- @import "compass/layout/sticky-footer";
+@import "compass/layout/sticky-footer";
 
 // Import partials
 @import "_partials/variables";
@@ -103,15 +103,23 @@ body {
 /* -----------------------------------------------------------------------------
 ## site Footer
 ----------------------------------------------------------------------------- */
+
 #colophon {
 	background-color: $color-grey-dark;
 	padding-top: 1em;
 	padding-bottom: 1em;
 	color: $color-grey-light;
+	
+	.widget-title {
+		font-size: 1.1em;
+	}
 }
 
 #site-footer-info {
+	margin-top: 1em;
 	text-align: center;
+	padding-top: 5px;
+	font-size: 0.7em;
 }
 
 .site-footer {
@@ -259,27 +267,39 @@ footer.entry-footer {
 }
 
 /* -----------------------------------------------------------------------------
-## Side bar
+## Sidebars
 ----------------------------------------------------------------------------- */
-.widget-title {
-	background-color: $color-red;
-	color: $color-yellow;
-	padding: 5px;
-	display: block;
-	font-size: $widget-title-size;
-	text-align: center;
+
+#sidebar-1 {
+	.widget-title {
+		background-color: $color-red;
+		color: $color-yellow;
+		padding: 5px;
+		display: block;
+		font-size: $widget-title-size;
+		text-align: center;
+	}	
+	
+	.widget-area {
+		.children {
+			margin-left: 1em;
+		}
+		
+		h1 {
+			margin-bottom: 1em;
+		}
+	}
 }
 
-.widget-area {
-	// .children {
-	// 	margin-left: 1em;
-	// }
-	
-	h1 {
-		margin-bottom: 1em;
+#sidebar-bottom {
+	font-size: $font-size-small;
+	.widget-title {
+		color: $color-yellow;
 	}
 	
 	.cat-item {
-		padding-left: 1em;
+		.children {
+			margin-left: 1em;
+		}
 	}
 }

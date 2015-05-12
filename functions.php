@@ -106,6 +106,16 @@ function imagineer_magic_widgets_init() {
 		'before_title'  => '<h1 class="widget-title">',
 		'after_title'   => '</h1>',
 	) );
+	
+	register_sidebar( array(
+		'name'          => __( 'Footer Bar', 'imagineer-magic' ),
+		'id'            => 'sidebar-bottom-1',
+		'description'   => 'The widget area in the footer',
+		'before_widget' => '<div id="%1$s" class="widget %2$s col-md-3">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h1 class="widget-title">',
+		'after_title'   => '</h1>',
+	) );
 }
 add_action( 'widgets_init', 'imagineer_magic_widgets_init' );
 
