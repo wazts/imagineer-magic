@@ -20,10 +20,10 @@
 					'after'  => '</div>',
 				) );
 			?>
+			<footer class="entry-footer">
+				<?php imagineer_magic_entry_footer(); ?>
+			</footer><!-- .entry-footer -->
 		</div><!-- .entry-content -->
-		<footer class="entry-footer">
-			<?php imagineer_magic_entry_footer(); ?>
-		</footer><!-- .entry-footer -->
 
 
 </article><!-- #post-## -->

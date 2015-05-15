@@ -38,6 +38,21 @@ body {
 	background-color: $color-background;
 }
 
+// Clear the focus highlight
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+.logo-brand {
+	color: $color-yellow;
+	text-decoration: none;
+	font-size: $font-size-logo;
+	font-family: 'Nothing You Could Do', cursive;
+}
+
 /* -----------------------------------------------------------------------------
 ## Dividers
 ----------------------------------------------------------------------------- */
@@ -57,7 +72,8 @@ body {
 /* -----------------------------------------------------------------------------
 ## Header / Top Nav
 ----------------------------------------------------------------------------- */
-#page-header {
+
+#header-image {
 	width:100%;
 	height: $page-header-height;
 	background-size: cover;
@@ -76,17 +92,19 @@ body {
 	line-height: $nav-height;
 	position: relative;
 	border: 0px;
-	background-color: rgba(68,68,68,0.6);
-	
+	background-color: $color-grey-dark;
+	margin-bottom: 0px;
 	
 	ul{
 		a {
 	    	color: $color-grey-light;
+	    	text-decoration: none;
+	    	
+	    	&:hover {
+	    		color: $color-grey-light;
+	   			background-color: $color-red;
+	    	}
 		}
-	   	a:hover {
-	   		color: $color-grey-light;
-	   		background-color: $color-red;
-	   	}
 	}
 	
 	.active {
@@ -96,11 +114,35 @@ body {
 			
 	    	background-color: $color-yellow;
 		}
+	
+	.navbar-form {
+		margin: 0;
+		padding: 0;
+		color: $color-grey-light;
+		
+		.search-header {
+			border: none;
+			background: none;
+			height: 2em;
+			padding-left: 0.5em;
+			padding-right: 0.5em;
+			
+			&:focus {
+				color: $color-grey-dark;
+				background-color: $color-grey-light;
+			}
+		}
+	}
 }
 
 .navbar-brand {
-    background-color: $color-yellow;
+    @extend .logo-brand;
+	&:hover {
+			color: $color-grey-light;
+	}
 }
+
+
 
 /* -----------------------------------------------------------------------------
 ## site Footer
@@ -111,10 +153,6 @@ body {
 	padding-top: 1em;
 	padding-bottom: 1em;
 	color: $color-grey-light;
-	
-	.widget-title {
-		font-size: 1.1em;
-	}
 }
 
 #site-footer-info {
@@ -130,6 +168,7 @@ body {
 		color: $color-grey-light;
 	}
 }
+
 /* -----------------------------------------------------------------------------
 ## Home page
 ----------------------------------------------------------------------------- */
@@ -144,29 +183,50 @@ body {
 	margin-bottom: 40px;
 }
 
-.entry-content{
+.entry-main {
 	font-size: 1.1em;
 	overflow-y : hidden;
 	min-height : 100px;
-	padding-left: 1em;
-	padding-right: 1em;
-	margin-top:1em;
-	top: -10px;
 	position:relative;
 	
+	.entry-meta {
+		border-top: 2px dashed $color-grey-light;
+	}
+}
+
+.entry-content{
+	padding-top: 1em;
+	padding-left: 1em;
+	padding-right: 1em;
+	border: dashed 2px $color-grey-light;
 	.read-more {
 		margin-top: 1em;
 		margin-bottom: 1em;
 		a {
 			color: $color-red;
 			text-decoration: underline;
+			
+			&:hover {
+				color: $color-red;
+				text-decoration: none;
+			}
 		}
 		
-		a:hover {
+	}
+	
+	.entry-footer {
+		border-top: dashed 2px $color-grey-light;
+    	font-size: $font-size-small;
+	    padding-top: 0.25em;
+	    padding-bottom: 0.25em;
+    	
+    	.edit-link {
 			color: $color-red;
-			text-decoration: none;
+			float: right;
 		}
-		
+		.cat-links {
+			color: $color-red;
+		}
 	}
 }
 
@@ -219,39 +279,11 @@ body {
 	
 }
 
-footer {
-	.entry-meta {
-		border-top: solid 1px $color-grey-light;
-    	border-bottom: solid 1px $color-grey-light;
-	}
-}
-
-footer.entry-footer {
-		border-top: solid 1px $color-grey-light;
-    	border-bottom: solid 1px $color-grey-light;
-    	font-size: $font-size-small;
-    	padding-left: 1em;
-	    padding-right: 1em;
-	    padding-top: 0.25em;
-	    padding-bottom: 0.25em;
-    	
-    	.edit-link {
-			color: $color-red;
-			float: right;
-		}
-		.cat-links {
-			color: $color-red;
-		}
-}
-
 .entry-meta {
 	font-size: $font-size-small;
-    padding-left: 1em;
-    padding-right: 1em;
     padding-top: 0.25em;
     padding-bottom: 0.25em;
     color: $color-yellow;
-    
    
     
     i {
@@ -261,34 +293,26 @@ footer.entry-footer {
     a {
         color: $text-color;
 		text-decoration: underline;
-    }
-    
-    a:hover {
-		text-decoration: none;
+		
+		&:hover {
+			text-decoration: none;
+		}
     }
 }
 
 /* -----------------------------------------------------------------------------
 ## Sidebars
 ----------------------------------------------------------------------------- */
-
-#sidebar-1 {
+#sidebar {
+	font-size: $font-size-small;
 	.widget-title {
-		background-color: $color-red;
 		color: $color-yellow;
-		padding: 5px;
-		display: block;
-		font-size: $widget-title-size;
-		text-align: center;
-	}	
+		font-size: 1.1em;
+	}
 	
-	.widget-area {
+	.cat-item {
 		.children {
 			margin-left: 1em;
-		}
-		
-		h1 {
-			margin-bottom: 1em;
 		}
 	}
 }
@@ -297,11 +321,30 @@ footer.entry-footer {
 	font-size: $font-size-small;
 	.widget-title {
 		color: $color-yellow;
+		font-size: 1.1em;
 	}
 	
 	.cat-item {
 		.children {
 			margin-left: 1em;
 		}
+	}
+}
+
+.widget_search {
+	width: 100%;
+	background-color: $color-grey-light;
+	
+	.search-field {
+		width: 100%;
+		background: none;
+		border: none;
+		padding: 5px;
+		
+		
+	}
+	
+	.search-submit {
+		
 	}
 }

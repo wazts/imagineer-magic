@@ -98,7 +98,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 body {
   color: #333;
   font-size: 1em;
-  font-family: "Varela Round", sans-serif;
+  font-family: "Raleway", "HelveticaNeue", Helvetica, Arial, sans-serif;
   font-weight: 400;
   line-height: 1.6;
 }
@@ -143,24 +143,40 @@ body {
   background-color: #eee;
 }
 
+/* line 42, sass/style.scss */
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: none;
+}
+
+/* line 49, sass/style.scss */
+.logo-brand, .navbar-brand {
+  color: #f8b226;
+  text-decoration: none;
+  font-size: 1.4em;
+  font-family: 'Nothing You Could Do', cursive;
+}
+
 /* -----------------------------------------------------------------------------
 ## Dividers
 ----------------------------------------------------------------------------- */
-/* line 45, sass/style.scss */
+/* line 60, sass/style.scss */
 .horizontal-red {
   width: 100%;
   height: 5px;
   background-color: #a03f3e;
 }
 
-/* line 49, sass/style.scss */
+/* line 64, sass/style.scss */
 .horizontal-yellow {
   width: 100%;
   height: 5px;
   background-color: #f8b226;
 }
 
-/* line 53, sass/style.scss */
+/* line 68, sass/style.scss */
 .horizontal-grey-light {
   width: 100%;
   height: 2px;
@@ -170,68 +186,85 @@ body {
 /* -----------------------------------------------------------------------------
 ## Header / Top Nav
 ----------------------------------------------------------------------------- */
-/* line 60, sass/style.scss */
-#page-header {
+/* line 76, sass/style.scss */
+#header-image {
   width: 100%;
   height: 400px;
   background-size: cover;
   background-position: 50% 50%;
 }
 
-/* line 67, sass/style.scss */
+/* line 83, sass/style.scss */
 .navbar {
   border-radius: 0px;
   position: relative;
   bottom: 0px;
 }
 
-/* line 73, sass/style.scss */
+/* line 89, sass/style.scss */
 .navbar-imagineer {
   height: 50px;
   line-height: 50px;
   position: relative;
   border: 0px;
-  background-color: rgba(68, 68, 68, 0.6);
+  background-color: #444444;
+  margin-bottom: 0px;
 }
-/* line 83, sass/style.scss */
+/* line 99, sass/style.scss */
 .navbar-imagineer ul a {
   color: #ddd;
+  text-decoration: none;
 }
-/* line 86, sass/style.scss */
+/* line 103, sass/style.scss */
 .navbar-imagineer ul a:hover {
   color: #ddd;
   background-color: #a03f3e;
 }
-/* line 92, sass/style.scss */
+/* line 110, sass/style.scss */
 .navbar-imagineer .active {
   background-color: #f8b226;
 }
-/* line 93, sass/style.scss */
+/* line 111, sass/style.scss */
 .navbar-imagineer .active a {
   color: #333;
 }
+/* line 118, sass/style.scss */
+.navbar-imagineer .navbar-form {
+  margin: 0;
+  padding: 0;
+  color: #ddd;
+}
+/* line 123, sass/style.scss */
+.navbar-imagineer .navbar-form .search-header {
+  border: none;
+  background: none;
+  height: 2em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
+/* line 130, sass/style.scss */
+.navbar-imagineer .navbar-form .search-header:focus {
+  color: #444444;
+  background-color: #ddd;
+}
 
-/* line 101, sass/style.scss */
-.navbar-brand {
-  background-color: #f8b226;
+/* line 140, sass/style.scss */
+.navbar-brand:hover {
+  color: #ddd;
 }
 
 /* -----------------------------------------------------------------------------
 ## site Footer
 ----------------------------------------------------------------------------- */
-/* line 109, sass/style.scss */
+/* line 151, sass/style.scss */
 #colophon {
   background-color: #444444;
   padding-top: 1em;
   padding-bottom: 1em;
   color: #ddd;
 }
-/* line 115, sass/style.scss */
-#colophon .widget-title {
-  font-size: 1.1em;
-}
 
-/* line 120, sass/style.scss */
+/* line 158, sass/style.scss */
 #site-footer-info {
   margin-top: 1em;
   text-align: center;
@@ -239,11 +272,11 @@ body {
   font-size: 0.7em;
 }
 
-/* line 127, sass/style.scss */
+/* line 165, sass/style.scss */
 .site-footer {
   min-height: 100px;
 }
-/* line 129, sass/style.scss */
+/* line 167, sass/style.scss */
 .site-footer a {
   color: #ddd;
 }
@@ -251,7 +284,7 @@ body {
 /* -----------------------------------------------------------------------------
 ## Home page
 ----------------------------------------------------------------------------- */
-/* line 136, sass/style.scss */
+/* line 175, sass/style.scss */
 .site-content {
   margin-top: 30px;
 }
@@ -259,39 +292,63 @@ body {
 /* -----------------------------------------------------------------------------
 ## Home page
 ----------------------------------------------------------------------------- */
-/* line 143, sass/style.scss */
+/* line 182, sass/style.scss */
 .post {
   margin-bottom: 40px;
 }
 
-/* line 147, sass/style.scss */
-.entry-content {
+/* line 186, sass/style.scss */
+.entry-main {
   font-size: 1.1em;
   overflow-y: hidden;
   min-height: 100px;
-  padding-left: 1em;
-  padding-right: 1em;
-  margin-top: 1em;
-  top: -10px;
   position: relative;
 }
-/* line 157, sass/style.scss */
+/* line 192, sass/style.scss */
+.entry-main .entry-meta {
+  border-top: 2px dashed #ddd;
+}
+
+/* line 197, sass/style.scss */
+.entry-content {
+  padding-top: 1em;
+  padding-left: 1em;
+  padding-right: 1em;
+  border: dashed 2px #ddd;
+}
+/* line 202, sass/style.scss */
 .entry-content .read-more {
   margin-top: 1em;
   margin-bottom: 1em;
 }
-/* line 160, sass/style.scss */
+/* line 205, sass/style.scss */
 .entry-content .read-more a {
   color: #a03f3e;
   text-decoration: underline;
 }
-/* line 165, sass/style.scss */
+/* line 209, sass/style.scss */
 .entry-content .read-more a:hover {
   color: #a03f3e;
   text-decoration: none;
 }
+/* line 217, sass/style.scss */
+.entry-content .entry-footer {
+  border-top: dashed 2px #ddd;
+  font-size: 0.85em;
+  padding-top: 0.25em;
+  padding-bottom: 0.25em;
+}
+/* line 223, sass/style.scss */
+.entry-content .entry-footer .edit-link {
+  color: #a03f3e;
+  float: right;
+}
+/* line 227, sass/style.scss */
+.entry-content .entry-footer .cat-links {
+  color: #a03f3e;
+}
 
-/* line 173, sass/style.scss */
+/* line 233, sass/style.scss */
 .entry-thumb {
   width: 100%;
   height: 200px;
@@ -299,7 +356,7 @@ body {
   background-position: 50% 50%;
 }
 
-/* line 181, sass/style.scss */
+/* line 241, sass/style.scss */
 .home-post-title {
   position: relative;
   top: -10px;
@@ -309,19 +366,19 @@ body {
   margin: 0 auto;
   background-color: #f8b226;
 }
-/* line 190, sass/style.scss */
+/* line 250, sass/style.scss */
 .home-post-title .entry-title {
   margin-top: 0;
   opacity: 1.0;
   color: #333;
   font-size: 1.5em;
 }
-/* line 195, sass/style.scss */
+/* line 255, sass/style.scss */
 .home-post-title .entry-title a {
   color: #333;
 }
 
-/* line 202, sass/style.scss */
+/* line 262, sass/style.scss */
 .single-header {
   position: relative;
   top: -45px;
@@ -331,60 +388,32 @@ body {
   padding: 1em;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
 }
-/* line 212, sass/style.scss */
+/* line 272, sass/style.scss */
 .single-header .entry-title {
   font-size: 2em;
 }
-/* line 216, sass/style.scss */
+/* line 276, sass/style.scss */
 .single-header .entry-meta {
   color: #333;
 }
 
-/* line 223, sass/style.scss */
-footer .entry-meta {
-  border-top: solid 1px #ddd;
-  border-bottom: solid 1px #ddd;
-}
-
-/* line 229, sass/style.scss */
-footer.entry-footer {
-  border-top: solid 1px #ddd;
-  border-bottom: solid 1px #ddd;
-  font-size: 0.9em;
-  padding-left: 1em;
-  padding-right: 1em;
-  padding-top: 0.25em;
-  padding-bottom: 0.25em;
-}
-/* line 238, sass/style.scss */
-footer.entry-footer .edit-link {
-  color: #a03f3e;
-  float: right;
-}
-/* line 242, sass/style.scss */
-footer.entry-footer .cat-links {
-  color: #a03f3e;
-}
-
-/* line 247, sass/style.scss */
+/* line 282, sass/style.scss */
 .entry-meta {
-  font-size: 0.9em;
-  padding-left: 1em;
-  padding-right: 1em;
+  font-size: 0.85em;
   padding-top: 0.25em;
   padding-bottom: 0.25em;
   color: #f8b226;
 }
-/* line 257, sass/style.scss */
+/* line 289, sass/style.scss */
 .entry-meta i {
   color: #a03f3e;
 }
-/* line 261, sass/style.scss */
+/* line 293, sass/style.scss */
 .entry-meta a {
   color: #333;
   text-decoration: underline;
 }
-/* line 266, sass/style.scss */
+/* line 297, sass/style.scss */
 .entry-meta a:hover {
   text-decoration: none;
 }
@@ -392,33 +421,43 @@ footer.entry-footer .cat-links {
 /* -----------------------------------------------------------------------------
 ## Sidebars
 ----------------------------------------------------------------------------- */
-/* line 276, sass/style.scss */
-#sidebar-1 .widget-title {
-  background-color: #a03f3e;
+/* line 306, sass/style.scss */
+#sidebar {
+  font-size: 0.85em;
+}
+/* line 308, sass/style.scss */
+#sidebar .widget-title {
   color: #f8b226;
-  padding: 5px;
-  display: block;
-  font-size: 1.5em;
-  text-align: center;
+  font-size: 1.1em;
 }
-/* line 286, sass/style.scss */
-#sidebar-1 .widget-area .children {
+/* line 314, sass/style.scss */
+#sidebar .cat-item .children {
   margin-left: 1em;
-}
-/* line 290, sass/style.scss */
-#sidebar-1 .widget-area h1 {
-  margin-bottom: 1em;
 }
 
-/* line 296, sass/style.scss */
+/* line 320, sass/style.scss */
 #sidebar-bottom {
-  font-size: 0.9em;
+  font-size: 0.85em;
 }
-/* line 298, sass/style.scss */
+/* line 322, sass/style.scss */
 #sidebar-bottom .widget-title {
   color: #f8b226;
+  font-size: 1.1em;
 }
-/* line 303, sass/style.scss */
+/* line 328, sass/style.scss */
 #sidebar-bottom .cat-item .children {
   margin-left: 1em;
+}
+
+/* line 334, sass/style.scss */
+.widget_search {
+  width: 100%;
+  background-color: #ddd;
+}
+/* line 338, sass/style.scss */
+.widget_search .search-field {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 5px;
 }

@@ -1,6 +1,8 @@
 <?php
 /**
- * The template for displaying search results pages.
+ * The template for displaying archive pages.
+ *
+ * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
  * @package Imagineer Magic
  */
@@ -14,9 +16,11 @@ get_header(); ?>
 		  
 				<?php if ( have_posts() ) : ?>
 					<header class="page-header">
-						<h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'imagineer-magic' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
-					</header><!-- .page-header -->
-					
+        				<?php
+        					the_archive_title( '<h1 class="page-title">', '</h1>' );
+        					the_archive_description( '<div class="taxonomy-description">', '</div>' );
+        				?>
+	    		    </header><!-- .page-header -->
 					<?php $post_count=0; /* Start the Loop */ ?>
 					<?php while ( have_posts() ) : the_post(); ?>
 	

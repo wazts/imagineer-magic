@@ -31,10 +31,7 @@
 					'after'  => '</div>',
 				) );
 			?>
-		</div><!-- .entry-content -->
-	</div><!-- .entry-main -->
-	<footer>
-		<?php if ( 'post' == get_post_type() ) : ?>
+			<?php if ( 'post' == get_post_type() ) : ?>
 			<div class="entry-meta">
 				<i class="fa fa-clock-o color-red"></i> <span class="content-date"><?php imagineer_magic_posted_on(); ?></span> | 
 				<i class="fa fa-user color-red"></i> <?php imagineer_magic_posted_by(); ?>
@@ -43,6 +40,9 @@
 					<?php comments_popup_link('No Comments', '1 Comment', '% Comments'); ?>
 				</span>
 			</div><!-- .entry-meta -->
-		<?php endif; ?>
+			<?php endif; ?>
+		</div><!-- .entry-content -->
+	</div><!-- .entry-main -->
+	<footer>
 	</footer>
 </article><!-- #post-## -->
