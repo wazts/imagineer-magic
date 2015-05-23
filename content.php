@@ -7,7 +7,7 @@
 	<div class="entry-main">
 		<header class="entry-header">
 			<?php if ( has_post_thumbnail() ) : ?>
-				<?php $img_url= wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array( 1000,1000 ), false ); ?>
+				<?php $img_url= wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array( 600,600 ), false ); ?>
 				<a href="<?php the_permalink(); ?>">
 					<div class="entry-thumb" style="background-image: url('<?php echo $img_url[0]; ?>')">
 					</div>

@@ -4,7 +4,7 @@ Theme URI: http://underscores.me/
 Author: Kyle Wagner
 Author URI: http://kyle-wagner.com
 Description: A theme for the Imagineer Magic blog.
-Version: 1.0.1
+Version: 1.0.2
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: imagineer-magic
@@ -163,6 +163,7 @@ button:focus {
 }
 
 .site-footer {
+	margin-top: 30px;
 	min-height: 100px;
 	a {
 		color: $color-grey-light;
@@ -301,6 +302,14 @@ button:focus {
 }
 
 /* -----------------------------------------------------------------------------
+## Category page
+----------------------------------------------------------------------------- */
+
+.cat-group {
+	margin-bottom: 15px;
+}
+
+/* -----------------------------------------------------------------------------
 ## Sidebars
 ----------------------------------------------------------------------------- */
 #sidebar {
@@ -308,12 +317,6 @@ button:focus {
 	.widget-title {
 		color: $color-yellow;
 		font-size: 1.1em;
-	}
-	
-	.cat-item {
-		.children {
-			margin-left: 1em;
-		}
 	}
 }
 
@@ -348,3 +351,10 @@ button:focus {
 		
 	}
 }
+
+.cat-item {
+	.children {
+		margin-left: 1em;
+	}
+}
+

@@ -16,16 +16,35 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main container" role="main">
-
-			<?php get_search_form(); ?>
-		    <h2>Archives by Month:</h2>
-		    <ul>
-		        <?php wp_get_archives('type=monthly'); ?>
-		    </ul>   
-		    <h2>Archives by Subject:</h2>
-		    <ul>
-		        <?php wp_list_categories(); ?>
-		    </ul>
+		    <?php 
+		    
+			    $categories = get_categories(
+		    		array (
+		    			'orderby' => 'name',
+						'parent' => 0	
+		    		)
+		    	);
+		    	
+		    	$col = 0;
+		    	
+		    ?>
+		    <?php foreach ($categories as $category): ?>
+		    	<?php if ($col % 3 == 0): ?>
+		    		<div class="row">
+		    	<?php endif; ?>
+				    	<div class="col-md-4 cat-group">
+					    	<a href="<?php echo esc_url( get_category_link($category->cat_ID)); ?>"><h2><?php echo $category->name; ?></h2></a>
+					    	<ul>
+						        <?php wp_list_categories('child_of=' . $category->cat_ID . '&title_li='); ?>
+						    </ul>
+					    </div>
+					    <?php $col = $col + 1; ?>
+			    <?php if ($col % 3 == 0): ?>
+			    	</div>
+			    <?php endif; ?>
+			    
+		    <?php endforeach; ?>
+		 
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
