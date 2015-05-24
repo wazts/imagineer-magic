@@ -4,7 +4,7 @@ Theme URI: http://underscores.me/
 Author: Kyle Wagner
 Author URI: http://kyle-wagner.com
 Description: A theme for the Imagineer Magic blog.
-Version: 1.0.2
+Version: 1.0.3
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: imagineer-magic
@@ -152,7 +152,7 @@ button:focus {
 }
 
 /* line 49, sass/style.scss */
-.logo-brand, .navbar-brand {
+.logo-brand, .navbar-imagineer .navbar-brand {
   color: #f8b226;
   text-decoration: none;
   font-size: 1.4em;
@@ -203,60 +203,58 @@ button:focus {
 
 /* line 89, sass/style.scss */
 .navbar-imagineer {
-  height: 50px;
-  line-height: 50px;
   position: relative;
   border: 0px;
   background-color: #444444;
   margin-bottom: 0px;
+  color: #ddd;
 }
-/* line 99, sass/style.scss */
-.navbar-imagineer ul a {
+/* line 98, sass/style.scss */
+.navbar-imagineer .navbar-nav li a {
   color: #ddd;
   text-decoration: none;
 }
-/* line 103, sass/style.scss */
-.navbar-imagineer ul a:hover {
+/* line 102, sass/style.scss */
+.navbar-imagineer .navbar-nav li a:hover {
   color: #ddd;
   background-color: #a03f3e;
 }
 /* line 110, sass/style.scss */
-.navbar-imagineer .active {
+.navbar-imagineer .navbar-nav .active a {
+  color: #444444;
   background-color: #f8b226;
 }
-/* line 111, sass/style.scss */
-.navbar-imagineer .active a {
-  color: #333;
+/* line 114, sass/style.scss */
+.navbar-imagineer .navbar-nav .active a:hover {
+  background-color: #f8b226;
 }
-/* line 118, sass/style.scss */
+/* line 122, sass/style.scss */
 .navbar-imagineer .navbar-form {
-  margin: 0;
-  padding: 0;
   color: #ddd;
 }
-/* line 123, sass/style.scss */
+/* line 125, sass/style.scss */
 .navbar-imagineer .navbar-form .search-header {
   border: none;
   background: none;
-  height: 2em;
   padding-left: 0.5em;
   padding-right: 0.5em;
+  height: 2em;
 }
-/* line 130, sass/style.scss */
+/* line 132, sass/style.scss */
 .navbar-imagineer .navbar-form .search-header:focus {
+  line-height: 2em;
   color: #444444;
   background-color: #ddd;
 }
-
-/* line 140, sass/style.scss */
-.navbar-brand:hover {
+/* line 142, sass/style.scss */
+.navbar-imagineer .navbar-brand:hover {
   color: #ddd;
 }
 
 /* -----------------------------------------------------------------------------
 ## site Footer
 ----------------------------------------------------------------------------- */
-/* line 151, sass/style.scss */
+/* line 152, sass/style.scss */
 #colophon {
   background-color: #444444;
   padding-top: 1em;
@@ -264,7 +262,7 @@ button:focus {
   color: #ddd;
 }
 
-/* line 158, sass/style.scss */
+/* line 159, sass/style.scss */
 #site-footer-info {
   margin-top: 1em;
   text-align: center;
@@ -272,12 +270,12 @@ button:focus {
   font-size: 0.7em;
 }
 
-/* line 165, sass/style.scss */
+/* line 166, sass/style.scss */
 .site-footer {
   margin-top: 30px;
   min-height: 100px;
 }
-/* line 168, sass/style.scss */
+/* line 169, sass/style.scss */
 .site-footer a {
   color: #ddd;
 }
@@ -285,7 +283,7 @@ button:focus {
 /* -----------------------------------------------------------------------------
 ## Home page
 ----------------------------------------------------------------------------- */
-/* line 176, sass/style.scss */
+/* line 177, sass/style.scss */
 .site-content {
   margin-top: 30px;
 }
@@ -293,63 +291,63 @@ button:focus {
 /* -----------------------------------------------------------------------------
 ## Home page
 ----------------------------------------------------------------------------- */
-/* line 183, sass/style.scss */
+/* line 184, sass/style.scss */
 .post {
   margin-bottom: 40px;
 }
 
-/* line 187, sass/style.scss */
+/* line 188, sass/style.scss */
 .entry-main {
   font-size: 1.1em;
   overflow-y: hidden;
   min-height: 100px;
   position: relative;
 }
-/* line 193, sass/style.scss */
+/* line 194, sass/style.scss */
 .entry-main .entry-meta {
   border-top: 2px dashed #ddd;
 }
 
-/* line 198, sass/style.scss */
+/* line 199, sass/style.scss */
 .entry-content {
   padding-top: 1em;
   padding-left: 1em;
   padding-right: 1em;
   border: dashed 2px #ddd;
 }
-/* line 203, sass/style.scss */
+/* line 204, sass/style.scss */
 .entry-content .read-more {
   margin-top: 1em;
   margin-bottom: 1em;
 }
-/* line 206, sass/style.scss */
+/* line 207, sass/style.scss */
 .entry-content .read-more a {
   color: #a03f3e;
   text-decoration: underline;
 }
-/* line 210, sass/style.scss */
+/* line 211, sass/style.scss */
 .entry-content .read-more a:hover {
   color: #a03f3e;
   text-decoration: none;
 }
-/* line 218, sass/style.scss */
+/* line 219, sass/style.scss */
 .entry-content .entry-footer {
   border-top: dashed 2px #ddd;
   font-size: 0.85em;
   padding-top: 0.25em;
   padding-bottom: 0.25em;
 }
-/* line 224, sass/style.scss */
+/* line 225, sass/style.scss */
 .entry-content .entry-footer .edit-link {
   color: #a03f3e;
   float: right;
 }
-/* line 228, sass/style.scss */
+/* line 229, sass/style.scss */
 .entry-content .entry-footer .cat-links {
   color: #a03f3e;
 }
 
-/* line 234, sass/style.scss */
+/* line 235, sass/style.scss */
 .entry-thumb {
   width: 100%;
   height: 200px;
@@ -357,7 +355,7 @@ button:focus {
   background-position: 50% 50%;
 }
 
-/* line 242, sass/style.scss */
+/* line 243, sass/style.scss */
 .home-post-title {
   position: relative;
   top: -10px;
@@ -367,19 +365,19 @@ button:focus {
   margin: 0 auto;
   background-color: #f8b226;
 }
-/* line 251, sass/style.scss */
+/* line 252, sass/style.scss */
 .home-post-title .entry-title {
   margin-top: 0;
   opacity: 1.0;
   color: #333;
   font-size: 1.5em;
 }
-/* line 256, sass/style.scss */
+/* line 257, sass/style.scss */
 .home-post-title .entry-title a {
   color: #333;
 }
 
-/* line 263, sass/style.scss */
+/* line 264, sass/style.scss */
 .single-header {
   position: relative;
   top: -45px;
@@ -389,32 +387,32 @@ button:focus {
   padding: 1em;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
 }
-/* line 273, sass/style.scss */
+/* line 274, sass/style.scss */
 .single-header .entry-title {
   font-size: 2em;
 }
-/* line 277, sass/style.scss */
+/* line 278, sass/style.scss */
 .single-header .entry-meta {
   color: #333;
 }
 
-/* line 283, sass/style.scss */
+/* line 284, sass/style.scss */
 .entry-meta {
   font-size: 0.85em;
   padding-top: 0.25em;
   padding-bottom: 0.25em;
   color: #f8b226;
 }
-/* line 290, sass/style.scss */
+/* line 291, sass/style.scss */
 .entry-meta i {
   color: #a03f3e;
 }
-/* line 294, sass/style.scss */
+/* line 295, sass/style.scss */
 .entry-meta a {
   color: #333;
   text-decoration: underline;
 }
-/* line 298, sass/style.scss */
+/* line 299, sass/style.scss */
 .entry-meta a:hover {
   text-decoration: none;
 }
@@ -422,7 +420,7 @@ button:focus {
 /* -----------------------------------------------------------------------------
 ## Category page
 ----------------------------------------------------------------------------- */
-/* line 308, sass/style.scss */
+/* line 309, sass/style.scss */
 .cat-group {
   margin-bottom: 15px;
 }
@@ -430,36 +428,36 @@ button:focus {
 /* -----------------------------------------------------------------------------
 ## Sidebars
 ----------------------------------------------------------------------------- */
-/* line 315, sass/style.scss */
+/* line 316, sass/style.scss */
 #sidebar {
   font-size: 0.85em;
 }
-/* line 317, sass/style.scss */
+/* line 318, sass/style.scss */
 #sidebar .widget-title {
   color: #f8b226;
   font-size: 1.1em;
 }
 
-/* line 323, sass/style.scss */
+/* line 324, sass/style.scss */
 #sidebar-bottom {
   font-size: 0.85em;
 }
-/* line 325, sass/style.scss */
+/* line 326, sass/style.scss */
 #sidebar-bottom .widget-title {
   color: #f8b226;
   font-size: 1.1em;
 }
-/* line 331, sass/style.scss */
+/* line 332, sass/style.scss */
 #sidebar-bottom .cat-item .children {
   margin-left: 1em;
 }
 
-/* line 337, sass/style.scss */
+/* line 338, sass/style.scss */
 .widget_search {
   width: 100%;
   background-color: #ddd;
 }
-/* line 341, sass/style.scss */
+/* line 342, sass/style.scss */
 .widget_search .search-field {
   width: 100%;
   background: none;
@@ -467,7 +465,7 @@ button:focus {
   padding: 5px;
 }
 
-/* line 356, sass/style.scss */
+/* line 357, sass/style.scss */
 .cat-item .children {
   margin-left: 1em;
 }

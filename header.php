@@ -20,17 +20,17 @@
 <body <?php body_class(); ?>>
 <div id="page" class="hfeed site">
 	<header id="page-header">
-		<nav class="navbar navbar-imagineer">
+		<nav class="navbar navbar-default navbar-imagineer">
 			<div class="container">
 			<!-- Brand and toggle get grouped for better mobile display -->
 				<div class="navbar-header">
-					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#primary-navbar" aria-expanded="false" aria-controls="navbar">
 						<span class="sr-only">Toggle navigation</span>
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-				<a class="navbar-brand" href="<?php bloginfo('url') ?>"><?php bloginfo('name') ?></a>
+					<a class="navbar-brand" href="<?php bloginfo('url') ?>"><?php bloginfo('name') ?></a>
 				</div>
 			
 				<!-- Collect the nav links, forms, and other content for toggling -->
@@ -48,7 +48,7 @@
 							'walker'            => new wp_bootstrap_navwalker())
 						);
 					?>
-					<form method="get" id="search-form" class="navbar-form navbar-right" role="search" action="<?php bloginfo('home'); ?>/">
+					<form method="get" id="search-form" class="navbar-form navbar-right hidden-xs" role="search" action="<?php bloginfo('home'); ?>/">
 						<div class="form-group">
 							<input type="text" class="search-header" placeholder="Search" name="s" id="s" />
 							<i class='fa fa-search'></i>

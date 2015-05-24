@@ -4,7 +4,7 @@ Theme URI: http://underscores.me/
 Author: Kyle Wagner
 Author URI: http://kyle-wagner.com
 Description: A theme for the Imagineer Magic blog.
-Version: 1.0.2
+Version: 1.0.3
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: imagineer-magic
@@ -87,62 +87,63 @@ button:focus {
 }
 
 .navbar-imagineer {
-	$nav-height: 50px;
-	height: $nav-height;
-	line-height: $nav-height;
 	position: relative;
 	border: 0px;
 	background-color: $color-grey-dark;
 	margin-bottom: 0px;
+	color: $color-grey-light;
 	
-	ul{
-		a {
-	    	color: $color-grey-light;
-	    	text-decoration: none;
-	    	
-	    	&:hover {
-	    		color: $color-grey-light;
-	   			background-color: $color-red;
-	    	}
+	.navbar-nav {
+		li {
+			a {
+		    	color: $color-grey-light;
+		    	text-decoration: none;
+		    	
+		    	&:hover {
+		    		color: $color-grey-light;
+		   			background-color: $color-red;
+		    	}
+			}
 		}
+		
+		.active {
+			a {
+				color: $color-grey-dark;
+				background-color: $color-yellow;
+				
+				&:hover {
+					background-color: $color-yellow;
+				}
+			}
+		}
+
 	}
 	
-	.active {
-			a {
-				color: $text-color;	
-			}
-			
-	    	background-color: $color-yellow;
-		}
-	
 	.navbar-form {
-		margin: 0;
-		padding: 0;
 		color: $color-grey-light;
 		
 		.search-header {
 			border: none;
 			background: none;
-			height: 2em;
 			padding-left: 0.5em;
 			padding-right: 0.5em;
+			height: 2em;
 			
 			&:focus {
+				line-height: 2em;
 				color: $color-grey-dark;
 				background-color: $color-grey-light;
 			}
 		}
 	}
-}
-
-.navbar-brand {
-    @extend .logo-brand;
-	&:hover {
-			color: $color-grey-light;
+	
+	.navbar-brand {
+	    @extend .logo-brand;
+		&:hover {
+				color: $color-grey-light;
+		}
 	}
 }
-
-
 
 /* -----------------------------------------------------------------------------
 ## site Footer
